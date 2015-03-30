@@ -1,0 +1,376 @@
+@charset "utf-8";
+/* CSS Document
+ * grifare.info
+ * Author name    : Armagan Tekdoner
+ * Student Number : 200253439
+ * Assignment Name: Motion Graphics Exercise
+ * Instructor     : Scott McCrindle
+ * Date           : February 2015
+ * File name      : special-effects.css
+ * Website		  : http://javascript.grifare.info
+,---.|             |o      ,---.     o ,---.              
+`---.|--- .   .,---|.,---. |  _.,---.. |__.,---.,---.,---.
+    ||    |   ||   |||   | |   ||    | |   ,---||    |---'
+`---'`---'`---'`---'``---' `---'`    ` `   `---^`    `---'  
+*/
+
+html, body {	   			
+-webkit-transition: background 1000ms linear;
+-moz-transition: background 1000ms linear;
+-o-transition: background 1000ms linear;
+-ms-transition: background 1000ms linear;
+transition: background 1000ms linear;
+	/* gradient generator from MS http://ie.microsoft.com/Testdrive/Graphics/CSSGradientBackgroundMaker/Default.html*/
+		/* IE10 Consumer Preview */ 
+		background: -ms-linear-gradient(bottom, #b123e9 0%, #000 100%);		
+		/* Mozilla Firefox */ 
+		background: -moz-linear-gradient(bottom, #b123e9 0%, #000 100%);
+		/* Opera */ 
+		background: -o-linear-gradient(bottom, #b123e9 0%, #000 100%);
+		/* Webkit (Safari/Chrome 10) */ 
+		background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #b123e9), color-stop(1, #000));
+		/* Webkit (Chrome 11+) */ 
+		background: -webkit-linear-gradient(bottom, #b123e9 0%, #000 100%);
+		/* W3C Markup, IE10 Release Preview */ 
+		background: linear-gradient(to top, #b123e9 0%, #000 100%);
+}
+
+/*red text that reads opened hole*/
+aside + span {
+/* not displayed initially, jquery will show it */
+display: none;
+			-ms-animation-name: openedHole;			
+			-moz-animation-name: openedHole;
+	        -webkit-animation-name: openedHole;
+  			animation-name: openedHole;
+			
+			-ms-animation-duration: 6000ms;			
+			-moz-animation-duration: 6000ms;
+	        -webkit-animation-duration: 6000ms;
+			animation-duration: 6000ms; /* duration specified in miliseconds to be more precise */
+            /* STEP 3: Set the animation timing function to control acceleration curves */
+			-ms-animation-timing-function: linear;				
+			-moz-animation-timing-function: linear;	
+ 			-webkit-animation-timing-function: linear;	
+			animation-timing-function: linear;
+            /* STEP 4: Set the animation delay*/
+		    -ms-animation-delay: 1000ms;			
+			-moz-animation-delay: 4000ms;
+			-webkit-animation-delay: 1000ms; 
+			animation-delay: 4000ms;
+
+			-ms-animation-play-state: forwards;			
+			-moz-animation-play-state: forwards;
+			-webkit-animation-play-state: forwards;
+			animation-play-state: forwards;		
+						
+	font-size: 4.5em;
+	color: #d1231f;
+	position: absolute;
+	z-index: 100;
+	transform: rotate(-8deg);
+	margin-left: 28%;
+	margin-top: -100px;		
+}
+
+		@-webkit-keyframes openedHole {
+		  from {
+			transform: rotate(0deg);
+			margin-left: 30%;
+			margin-top: -100px;	
+		  }		
+				  20% {
+					font-size: 80%;
+				  }		
+				  
+				  50% {
+					font-size: 60%;
+				
+				  }
+					  
+				  75% {
+					font-size: 40%;
+				  }
+				  
+				  100% {
+					font-size: 0%;
+				  }
+		
+		  to {
+			transform: rotate(110deg);
+			margin-left: 70%;
+			margin-top: 30%;
+			font-size: 0px;
+			}
+		  }
+		  
+		  @-ms-keyframes openedHole {
+		  from {
+			transform: rotate(0deg);
+			margin-left: 30%;
+			margin-top: -100px;	
+		  }		
+				  20% {
+					font-size: 80%;
+				  }		
+				  
+				  50% {
+					font-size: 60%;
+				
+				  }
+					  
+				  75% {
+					font-size: 40%;
+				  }
+				  
+				  100% {
+					font-size: 0%;
+				  }
+		
+		  to {
+			transform: rotate(110deg);
+			margin-left: 70%;
+			margin-top: 30%;
+			font-size: 0px;
+			}
+		  }
+		  
+		  @-moz-keyframes openedHole {
+		  from {
+			transform: rotate(0deg);
+			margin-left: 30%;
+			margin-top: -100px;	
+		  }		
+				  20% {
+					font-size: 80%;
+				  }		
+				  
+				  50% {
+					font-size: 60%;
+				
+				  }
+					  
+				  75% {
+					font-size: 40%;
+				  }
+				  
+				  100% {
+					font-size: 0%;
+				  }
+		
+		  to {
+			transform: rotate(110deg);
+			margin-left: 70%;
+			margin-top: 30%;
+			font-size: 0px;
+			}
+		  }
+			  
+		  
+		  @-o-keyframes openedHole {
+		  from {
+			transform: rotate(0deg);
+			margin-left: 30%;
+			margin-top: -100px;	
+		  }		
+				  20% {
+					font-size: 80%;
+				  }		
+				  
+				  50% {
+					font-size: 60%;
+				
+				  }
+					  
+				  75% {
+					font-size: 40%;
+				  }
+				  
+				  100% {
+					font-size: 0%;
+				  }
+		
+		  to {
+			transform: rotate(110deg);
+			margin-left: 70%;
+			margin-top: 30%;
+			font-size: 0px;
+			}
+		  }
+		  
+		  keyframes openedHole {
+		  from {
+			transform: rotate(0deg);
+			margin-left: 30%;
+			margin-top: -100px;	
+		  }		
+				  20% {
+					font-size: 80%;
+				  }		
+				  
+				  50% {
+					font-size: 60%;
+				
+				  }
+					  
+				  75% {
+					font-size: 40%;
+				  }
+				  
+				  100% {
+					font-size: 0%;
+				  }
+		
+		  to {
+			transform: rotate(110deg);
+			margin-left: 70%;
+			margin-top: 30%;
+			font-size: 0px;
+			}
+		  }
+		  
+/*moving text*/
+h2{	
+			-ms-animation-name: slideWarnings;			
+			-moz-animation-name: slideWarnings;
+	        -webkit-animation-name: slideWarnings;
+  			animation-name: slideWarnings;
+						
+			-ms-animation-duration: 4000ms;			
+			-moz-animation-duration: 4000ms;
+	        -webkit-animation-duration: 4000ms;
+			animation-duration: 4000ms; /* duration specified in miliseconds to be more precise */
+            /* STEP 3: Set the animation timing function to control acceleration curves */
+			-ms-animation-timing-function: linear;				
+			-moz-animation-timing-function: linear;	
+ 			-webkit-animation-timing-function: linear;	
+			animation-timing-function: linear;
+            /* STEP 4: Set the animation delay */
+			-ms-animation-delay: 9000ms;			
+			-moz-animation-delay: 9000ms;
+			-webkit-animation-delay: 9000ms;
+			animation-delay: 9000ms; /* starts after 3 seconds */
+		/*	-ms-animation-direction: alternate;		*/	
+			-moz-animation-direction: alternate;
+			-webkit-animation-direction: alternate;
+			animation-direction: alternate; /* goes back and forth */
+            /* STEP 7: Control whether the animation is playing or not */
+			-ms-animation-play-state: forwards;			
+			-moz-animation-play-state: forwards;
+			-webkit-animation-play-state: forwards;
+			animation-play-state: forwards;					
+}
+
+		@-webkit-keyframes slideWarnings {
+		from {
+		  margin-left: 0%;
+		}		
+	  
+		to {
+		  margin-left: 80%;
+		  }
+		}
+		
+		@-ms-keyframes slideWarnings {
+		from {
+		  margin-left: 0%;
+		}		
+	  
+		to {
+		  margin-left: 80%;
+		  }
+		}
+		
+		@-moz-keyframes slideWarnings {
+		from {
+		  margin-left: 0%;
+		}		
+	  
+		to {
+		  margin-left: 80%;
+		  }
+		}
+		
+		@-o-keyframes slideWarnings {
+		from {
+		  margin-left: 0%;
+		}		
+	  
+		to {
+		  margin-left: 80%;
+		  }
+		}
+				
+		keyframes slideWarnings {
+		from {
+		  margin-left: 0%;
+		}		
+	  
+		to {
+		  margin-left: 80%;
+		  }
+		}		
+		
+/* final trick: rotating space image */
+	body > div:nth-of-type(1) img{
+		  -ms-animation: rotatingSpace 60s linear infinite;			
+		  -moz-animation: rotatingSpace 60s linear infinite;
+		  -webkit-animation: rotatingSpace 60s linear infinite;
+		  animation: rotatingSpace 60s linear infinite;
+}		
+				
+		@-webkit-keyframes rotatingSpace{
+		  from {
+			   -webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+		  }
+		  to {
+			   -webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
+		  }
+		}
+		
+		@-ms-keyframes rotatingSpace {
+		  from {
+			   -webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+		  }
+		  to {
+			   -webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
+		  }
+		}
+			
+		@-moz-keyframes rotatingSpace {
+		  from {
+			   -webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+		  }
+		  to {
+			   -webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
+		  }
+		}
+			
+		@-o-keyframes rotatingSpace {
+		  from {
+			   -webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+		  }
+		  to {
+			   -webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
+		  }
+		}
+		
+		@-keyframes rotatingSpace{
+		  from {
+			   -webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+		  }
+		  to {
+			   -webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
+		  }
+		}			
+/* end of file */

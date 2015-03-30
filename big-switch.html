@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html lang="EN">
+<!--
+ * Author name    : Armagan Tekdoner
+ * Student Number : 200253439
+ * Assignment Name: Motion Graphics Exercise
+ * Instructor     : Scott McCrindle
+ * Date           : February 2015
+ * File name      : big-switch.html
+ * Website		  : http://javascript.grifare.info
+,---.|             |o      ,---.     o ,---.              
+`---.|--- .   .,---|.,---. |  _.,---.. |__.,---.,---.,---.
+    ||    |   ||   |||   | |   ||    | |   ,---||    |---'
+`---'`---'`---'`---'``---' `---'`    ` `   `---^`    `---'  
+ -->
+<head>
+  <meta charset="utf-8">
+  <title>Big Switch</title>
+  <meta name="description" content="Project 1 at Georgian College for the course COMP 2105, Motion Graphics">
+  <link rel="icon" type="image/x-icon" href="http://www.grifare.info/favicon.ico">  
+  <!--local css file-->
+  <link rel="stylesheet" href="css/big-switch.css">
+  <script src="javascript/jquery-1.11.2.min.js"></script>
+  <script src="javascript/big-switch.js"></script>
+</head>
+
+<body onLoad="javascript:preloader()">
+
+  <div></div><!-- this div is not displayed until the final trick -->
+
+  <header>
+  <!--this part is the instructions borrowed from the project requirements-->
+    <h1>The Big Switch or D-day</h1>
+    <h2>DESCRIPTION</h2>
+    <p>Make it fun.</p>
+    <h2>INSTRUCTIONS</h2>
+    <div><img src="images/lightbulb1.png" alt="light bulb off" title="light turned off - click switch to turn on" /></div>
+    <ol>
+      <li>Build a simple HTML page that uses a few elements that could be used to build a toggle switch.</li>
+      <li>Style the switch using CSS so that it looks convincing.</li>
+      <li>Incorporate some sort of CSS transform, transition effect or a simple CSS animation to some part of the switch.</li>
+      <li>Employ one or more jQuery effects to some aspect of the user interface.</li>
+      <li>Have fun.</li>
+    </ol>
+  </header>
+  
+<div>  
+
+  <aside>
+    <p>According to rumours, CSS now is said to be capable of handling even onclick events.<br />
+    <strong>The button below does just that.</strong></p>     
+    <a href="#hidden-secret-layer1" class="button green"><div class="light">Reveal the <em>skeleton in the cupboard</em></div></a>   
+    <div id="hidden-secret-layer1">
+      <div id="hidden-secret-layer2">
+        <picture><!--this new element enables auto scaling of the image-->
+            <source srcset="images/skeleton-in-closet.jpg">    
+            <img src="images/skeleton-in-closet.jpg" alt="skeleton in the cupboard" title="skeleton in the cupboard revealed" />
+        </picture>      
+        <a href="#hidden-secret-layer2" class="button darkred"><div class="light">Hide the <em>skeleton in the cupboard</em></div></a>
+      </div>           
+    </div>
+  </aside>
+  
+  <span></span><!-- initially hidden -->
+  
+  <section>
+    <div>
+          <!--image provided by the instructor--> 		
+          <img src="images/button-red.png" alt="switch" title="light turned off">        
+    </div>
+    
+    <h3>Turn on the light to see the instructions better ▶</h3>  
+    
+    <div>
+        <label>
+        <!--makes the switch functional-->
+          <input type="checkbox">
+          <span class="hole">
+            <span class="switch">
+              <span class="one"></span>
+              <span class="zero"></span>
+            </span>
+          </span>
+        </label>    
+    </div>
+    
+    <h3>Turn on the engine to start the D-day show ▶</h3> 
+  </section>
+</div>
+
+<footer>
+    <h2>USERS' MANUAL - In total, there are 3 buttons a user can click.</h2>
+    <ul>
+      <li>The GREEN button on the left, is intended to showcase how a CSS-driven event handler works. No JavaScript at all!</li>
+      <li>The currently turned-off button in the middle that reads "OFF", is a 2-image set provided by the instructor and its functioning is purely jQuery-driven.</li>
+      <li>The analogue switch underneath, is the actual deal. It is NOT an image in the first place: it is purely CSS. Once clicked, CSS3 and jQuery hybridly handle a hell lot of events, together. BEWARE!</li>
+      <li>Have fun.</li>
+    </ul>
+  <p>copyright 2015 - <script>document.write(currentYear);</script> by Armagan Tekdoner | <a href="http://grifare.info" target="_blank">Official Website</a> | <a href="Big-Switch-product-specifications.pdf" target="_blank">Download Product Specifications</a></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+@charset "utf-8";
+/* CSS Document
+ * grifare.info
+ * Author name    : Armagan Tekdoner
+ * Student Number : 200253439
+ * Assignment Name: Motion Graphics Exercise
+ * Instructor     : Scott McCrindle
+ * Date           : February 2015
+ * File name      : big-switch.css
+ * Website		  : http://javascript.grifare.info 
+,---.|             |o      ,---.     o ,---.              
+`---.|--- .   .,---|.,---. |  _.,---.. |__.,---.,---.,---.
+    ||    |   ||   |||   | |   ||    | |   ,---||    |---'
+`---'`---'`---'`---'``---' `---'`    ` `   `---^`    `---'  
+*/
+
+/* imports a stylesheet for some buttons */
+@import 'shiny-css-buttons.css';
+/* imports a stylesheet for the analogue switch */
+@import 'analogue-switch.css';
+
+
+	html, body {
+		/* a web-safe and pin-sharp font for all body texts */	
+		font-family: "Lucida Console", Monaco, monospace;
+		color: #fff;
+		line-height: 140%;
+		padding: 10px;
+		font-size: 0.85em;
+
+		/* gradient generator from MS http://ie.microsoft.com/Testdrive/Graphics/CSSGradientBackgroundMaker/Default.html*/
+			/* IE10 Consumer Preview */ 
+			background: -ms-linear-gradient(bottom, #FEFEFE 0%, #000000 100%);		
+			/* Mozilla Firefox */ 
+			background: -moz-linear-gradient(bottom, #FEFEFE 0%, #000000 100%);
+			/* Opera */ 
+			background: -o-linear-gradient(bottom, #FEFEFE 0%, #000000 100%);
+			/* Webkit (Safari/Chrome 10) */ 
+			background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #FEFEFE), color-stop(1, #000000));
+			/* Webkit (Chrome 11+) */ 
+			background: -webkit-linear-gradient(bottom, #FEFEFE 0%, #000000 100%);
+			/* W3C Markup, IE10 Release Preview */ 
+			background: linear-gradient(to top, #FEFEFE 0%, #000000 100%);	
+	}
+		
+	img {
+		/* To always avoid auto-bordered image links */
+		border-style: none;
+	}
+	
+
+	body > div:nth-of-type(1) {
+		display: none;		
+		width: 450px;
+		height: 450px;
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		/* prevents the rotating image from being bigger than the comtainer */
+		overflow: hidden;	
+	}
+	
+	body > div:nth-of-type(1) img{
+		position: absolute;
+		margin-left: -160px;
+		margin-top: -160px;	
+	}
+	
+	h1{
+		font-size: 3em;
+		font-weight: bold;
+	}
+
+	header div{
+		margin-left: 200px;
+		margin-top: -70px;
+	}
+	
+	header div img{
+		position: relative;
+		z-index: 100;
+	}
+		
+	ol{
+		margin-top: -85px;
+		color: #666;
+	}
+		
+		aside{
+			position: absolute;
+			width: 18%;
+			padding: 0px 5px 0px 5px;
+			box-shadow :0 15px 10px rgba(0, 0, 0, 0.7);
+						/* IE10 Consumer Preview */ 
+			background: -ms-linear-gradient(bottom, #ddd 0%, #444 100%);		
+			/* Mozilla Firefox */ 
+			background: -moz-linear-gradient(bottom, #ddd 0%, #444 100%);
+			/* Opera */ 
+			background: -o-linear-gradient(bottom, #ddd 0%, #444 100%);
+			/* Webkit (Safari/Chrome 10) */ 
+			background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ddd), color-stop(1, #444));
+			/* Webkit (Chrome 11+) */ 
+			background: -webkit-linear-gradient(bottom, #ddd 0%, #444 100%);
+			/* W3C Markup, IE10 Release Preview */ 
+			background: linear-gradient(to top, #ddd 0%, #444 100%);		
+		}
+		
+		/* CSS-driven onlick event trick*/
+		#hidden-secret-layer1{
+			display: none;	
+		}
+		
+		#hidden-secret-layer1:target{
+			display: block;
+		}	
+		
+/*		#hidden-secret-layer2:target{
+			display: none;
+		}
+		*/
+		aside img{
+			margin-left: 42px;
+			margin-top: -10px;
+			margin-bottom: -8px;
+			max-width:100%;
+			height:auto;
+		}		
+		
+		.light{
+			font-size: 0.8em;
+			line-height: 110%;
+			padding-top: 5px;		 
+		}
+
+	aside + span {
+	/* not displayed initially, jquery will show it */
+	display: none;
+	}
+
+	section{
+		position: relative;		
+		width: 600px;
+		height: 400px;
+		margin-left: auto;
+		margin-right: auto;
+		background-image:url(../images/metal-background.jpg);
+		padding: 10px 0px 10px 20px;
+		color: #fff;	
+		box-shadow :0 15px 10px rgba(0, 0, 0, 0.7);
+		z-index: 20;
+	}
+
+	section h3{
+		position:absolute;
+		width: 220px;
+	}
+	
+	section h3:nth-of-type(1){
+		margin-top: -40px;
+	}
+	section h3:nth-of-type(2){
+		margin-top: 84px;
+	}	
+	
+	section div:nth-of-type(1){
+		position: relative;
+		margin-left: 250px;
+		margin-top: 10px;		
+	}	
+	
+	section div:nth-of-type(2){
+		position: relative;
+		margin-left: 78px;
+		margin-top: 140px;	
+	}
+	
+  footer{
+	  position: fixed;
+	  bottom: 0;
+	  /* give it dimensions */
+	  width: 100%;
+	  /* center the element */
+	  text-align: center;
+	  padding-bottom: 5px;
+	  z-index: 10;
+	  font-size: 0.8em; 
+  }
+  
+  footer a:link{
+	  color: #f8f19d;
+  }
+  
+  footer a:hover{
+	  color: #fff;
+	  text-decoration: underline;
+  }	
+  
+  footer a:visited{
+	  color: #fff;
+	  text-decoration: underline;
+  }
+  
+  ul{
+	  list-style: none;
+	  
+  }
+/* end of file */
+
+aside + div{
+color: yellow;	
+}
